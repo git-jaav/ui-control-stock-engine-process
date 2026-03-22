@@ -1,0 +1,21 @@
+<section class="stock-container">
+
+  <header class="stock-header">
+    <h2>Current control stock</h2>
+
+    <button
+      type="button"
+      (click)="refresh()"
+      aria-label="Refresh stock list">
+      Refresh
+    </button>
+  </header>
+
+  <ul>
+    <li *ngFor="let item of stock$ | async; trackBy: trackById">
+      <strong>{{ item.name }}</strong>
+      <span>Quantity: {{ item.quantity }}</span>
+    </li>
+  </ul>
+
+</section>
