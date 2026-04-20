@@ -10,7 +10,7 @@ import { ControlStockService, StockItem } from '../_services/control-stock.servi
   standalone: true,
   imports: [NgFor, AsyncPipe],
   templateUrl: './control-stock.component.html',
-  styleUrls: ['./control-stock.component.css'],
+  styleUrls: ['./control-stock.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ControlStockComponent {
@@ -26,6 +26,7 @@ export class ControlStockComponent {
   refresh(): void {
     this.refreshTrigger.next();
   }
+
 
   trackById(index: number, item: StockItem): number {
     return item.id;

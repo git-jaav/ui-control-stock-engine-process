@@ -1,0 +1,65 @@
+
+$primary-color: #4a90e2;
+$secondary-color: #50e3c2;
+$danger-color: #e94e77;
+$text-color: #333;
+$border-color: #e0e0e0;
+$background-color: #ffffff;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin button-variant($bg) {
+  background-color: $bg;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+// Extends
+%input-style {
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  outline: none;
+}
+
+%scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $primary-color;
+    border-radius: 4px;
+  }
+}
+
+.stock-actions-top {
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.btn-success {
+  background-color: #28a745; /* green */
+  color: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+
+  &:hover {
+    opacity: 0.95;
+  }
+}
